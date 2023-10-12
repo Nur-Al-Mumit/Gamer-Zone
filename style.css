@@ -162,6 +162,15 @@ menu a:last-child {
     padding: 50px 150px 0 150px;
 }
 
+.game>p {
+    margin-top: 10px;
+    color: #534C64;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
 .game-img-container:hover .shadow {
     opacity: 1;
 }
@@ -174,9 +183,17 @@ menu a:last-child {
     opacity: 0;
     transition: all;
     transition-duration: 0.3s;
+    flex-direction: column;
+    gap: 20px;
 }
-.shadow>svg{
+
+.shadow>svg {
     cursor: pointer;
+}
+
+.shadow>p {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .game-img-container {
@@ -202,6 +219,48 @@ menu a:last-child {
 .shadow>img {
     width: 100px;
 }
+
+/* instant-play */
+
+.instant-play {
+    padding: 100px 150px 100px 150px;
+    justify-content: space-between;
+}
+
+.instant-play-description {
+    width: 35%;
+    text-align: right;
+}
+
+.instant-play-description>h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.instant-play-description>p {
+    margin-top: 10px;
+    color: #534C64;
+    font-size: 18px;
+}
+
+.instant-play-img {
+    position: relative;
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.instant-play-img img:nth-child(1) {
+    width: 100%;
+}
+
+.absolute-img {
+    position: absolute;
+    left: -110px;
+    bottom: 0;
+    width: 220px;
+}
+
 
 /* Resposive design */
 @media (max-width: 769px) {
@@ -255,6 +314,33 @@ menu a:last-child {
         padding: 0 100px 0 100px;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .instant-play {
+        padding: 60px;
+    }
+
+    .instant-play-img {
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .absolute-img {
+        left: -50px;
+        width: 100px;
+    }
+
+    .instant-play-description>h1 {
+        font-size: 35px;
+        text-align: right;
+    }
+    .instant-play-description>p {
+        font-size: 15px;
+    }
+
+    .instant-play-description {
+        width: 40%;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -269,7 +355,36 @@ menu a:last-child {
     }
 
     .games {
-        padding: 0 100px 0 100px;
+        padding: 0 50px 0 50px;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .instant-play {
+        padding: 60px;
+        flex-direction: column;
+    }
+
+    .instant-play-img {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .absolute-img {
+        left: -50px;
+        width: 100px;
+    }
+
+    .instant-play-description>h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .instant-play-description>p {
+        text-align: center;
+    }
+    .br-hidden{
+        display: none;
+    }
+    .instant-play-description {
+        width: 100%;
     }
 }
