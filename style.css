@@ -261,6 +261,109 @@ menu a:last-child {
     width: 220px;
 }
 
+.game-chips {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
+}
+
+.game-chips>div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.chip {
+    border: 0;
+    border-radius: 50px;
+    color: #0B0223;
+    background: white;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 12px;
+    padding: 10px;
+    border: 1.5px solid transparent;
+}
+
+.chip:hover {
+    cursor: pointer;
+    background: -webkit-linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    border: 1.5px solid #FF42A5;
+}
+
+footer {
+    margin-top: 100px;
+    padding: 50px;
+    color: white;
+    background: #0B0223;
+}
+
+.footer-logo {
+    gap: 10px;
+
+}
+
+.footer-menu {
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.footer-menu>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+.media-icons {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+    margin: auto;
+}
+
+.media-icons>a {
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.terms{
+    padding-top: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    width: 60%;
+}
+.terms>a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 20px;
+}
+.copy-right{
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.60);
+
+}
 
 /* Resposive design */
 @media (max-width: 769px) {
@@ -333,6 +436,7 @@ menu a:last-child {
         font-size: 35px;
         text-align: right;
     }
+
     .instant-play-description>p {
         font-size: 15px;
     }
@@ -341,6 +445,29 @@ menu a:last-child {
         width: 40%;
     }
 
+    .game-chips {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-menu {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+        column-gap: 50px;
+        width: 70%;
+    }
+
+    .footer-menu>a {
+        display: grid;
+        justify-content: center;
+        font-size: 16px;
+    }
+    .media-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .terms{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -378,13 +505,39 @@ menu a:last-child {
         font-size: 35px;
         text-align: center;
     }
+
     .instant-play-description>p {
         text-align: center;
     }
-    .br-hidden{
+
+    .br-hidden {
         display: none;
     }
+
     .instant-play-description {
         width: 100%;
+    }
+
+    .chip {
+        font-size: 10px;
+        gap: 5px;
+        padding: 5px;
+        font-weight: 500;
+    }
+
+    .chip>img {
+        width: 20px;
+    }
+
+    .footer-menu {
+        width: 100%;
+        gap: 20px;
+    
+    }
+    .terms{
+        width: 100%;
+    }
+    .terms>a{
+        font-size: 15px;
     }
 }
